@@ -1,24 +1,23 @@
-const pokemonsUrl = `https://pokeapi.co/api/v2/pokemon?limit=151%27`;
+const pokemonsUrl = `https://pokeapi.co/api/v2/pokemon?limit=151`;
 
 // https://medium.com/@sergio13prez/fetching-them-all-poke-api-62ca580981a2
 
-const getPokemonList = async () => {
+const getKantoPokemons = async () => {
   try {
     const resp = await fetch(pokemonsUrl);
 
     if (!resp.ok) throw 'error';
 
-    const { results } = await resp.json();
-
-    return results;
+    return await resp.json();
   } catch (err) {
     throw err;
   }
 };
 
-const getPokemonProperties = async (pokemon) => {
+const getKantoPokemonsData = async (pokemon) => {
   try {
     let pokemonUrl = pokemon.url;
+
     const resp = await fetch(pokemonUrl);
 
     if (!resp.ok) throw 'error';
@@ -29,4 +28,4 @@ const getPokemonProperties = async (pokemon) => {
   }
 };
 
-export { getPokemonList, getPokemonProperties };
+export { getKantoPokemons, getKantoPokemonsData };
