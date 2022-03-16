@@ -1,0 +1,81 @@
+@use '../util' as *;
+
+// Source: https://www.w3schools.com/howto/howto_css_flip_card.asp
+.flip-card {
+  background-color: transparent;
+  height: rem(250);
+  perspective: rem(1000);
+  width: rem(200);
+
+  .flip-card:hover &-inner {
+    transform: rotateY(180deg);
+  }
+
+  // Source: https://getcssscan.com/css-box-shadow-examples
+  &-inner {
+    -webkit-box-shadow: -7px 6px 0 -4px var(--box-shadow-card), -7px 6px var(--border-text-card);
+    -moz-box-shadow: -7px 6px 0 -4px var(--box-shadow-card), -7px 6px var(--border-text-card);
+    box-shadow: -7px 6px 0 -4px var(--box-shadow-card), -7px 6px var(--border-text-card);
+    height: 100%;
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    width: 100%;
+  }
+
+  &-front,
+  &-back {
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border: 4px solid var(--border-text-card);
+    border-radius: 1%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  &-front {
+    align-items: center;
+    background-color: var(--bg-card);
+    color: var(--border-text-card);
+  }
+
+  &-back {
+    background-color: var(--bg-alter-card);
+    color: var(--text-alter-card);
+    transform: rotateY(180deg);
+  }
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__id,
+  &__name {
+    font-size: rem(15);
+  }
+
+  &__img {
+    width: rem(145);
+  }
+}
+
+.data {
+  &__title {
+    font-size: rem(12);
+    margin-top: rem(10);
+  }
+
+  &__item {
+    font-size: rem(10);
+  }
+
+  &__list {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+}

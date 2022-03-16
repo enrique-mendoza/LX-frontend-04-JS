@@ -1,0 +1,9 @@
+@use '../util' as *;
+
+.pokemons-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: rem(25);
+  grid-template-columns: repeat(7, 1fr);
+}

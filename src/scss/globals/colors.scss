@@ -1,0 +1,21 @@
+:root {
+  // Layout
+  --bg-red: hsl(344, 91%, 43%);
+
+  // Search bar
+  --bg-label: hsl(168, 78%, 14%);
+  --border-label: hsl(173, 33%, 5%);
+  --text-color: hsl(0, 0%, 89%);
+
+  --bg-input: hsl(0, 0%, 98%);
+
+  // Card
+  --bg-card: hsl(0, 0%, 89%);
+  --border-text-card: hsl(150, 33%, 1%);
+  --box-shadow-card: hsl(150, 1%, 50%);
+
+  // Alter card
+  --bg-alter-card: hsl(168, 78%, 14%);
+  --border-alter-card: hsl(173, 33%, 5%);
+  --text-alter-card: hsl(183, 100%, 96%);
+}

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Pokemon';
+  src: url('../assets/fonts/PokemonGb-RAeo.ttf') format('truetype');
+}
+
+:root {
+  --font-pokemon: 'Pokemon', sans-serif;
+}

@@ -1,0 +1,24 @@
+@use '../util' as *;
+
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: rem(65);
+  justify-content: center;
+  margin-top: rem(36);
+
+  label {
+    color: var(--text-color);
+    background-color: var(--bg-label);
+    border: 1px solid var(--border-label);
+    padding: rem(5);
+  }
+
+  input[type='text'],
+  input[type='number'] {
+    background-color: var(--bg-input);
+    padding: rem(3);
+  }
+}

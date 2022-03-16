@@ -1,0 +1,16 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bg-red);
+  font-family: var(--font-pokemon);
+  padding: 0;
+}
