@@ -7,7 +7,7 @@
 ## Practices
 
 1. Page layout.
-2. Styles with CSS.
+2. Styles with CSS (Pokédex style).
 3. Work with Pokémon API through input.
 4. Display the following information:
    - Name.
@@ -24,7 +24,7 @@
 
 ## Results
 
-Check out the live website here. 👀
+Check out the live website [here](https://enrique-mendoza.github.io/launchX-FrontEnd-Mission-04-JavaScript/). 👀
 
 ## Notes
 
