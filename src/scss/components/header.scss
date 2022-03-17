@@ -5,20 +5,50 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: rem(65);
+  gap: rem(45);
   justify-content: center;
   margin-top: rem(36);
+
+  // Source: https://codepen.io/zFunx/embed/GWPQNz?height=316&theme-id=0&default-tab=result
+  input[type='text'],
+  label {
+    border: 2px solid var(--border-input);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: rem(8) 0;
+    outline: none;
+    padding: rem(8);
+    transition: 0.3s;
+    width: 100%;
+  }
 
   label {
     color: var(--text-color);
     background-color: var(--bg-label);
-    border: 1px solid var(--border-label);
-    padding: rem(5);
+    border: 2px solid var(--border-label);
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint(medium) {
+      text-align: start;
+      width: 33%;
+    }
   }
 
-  input[type='text'],
-  input[type='number'] {
-    background-color: var(--bg-input);
-    padding: rem(3);
+  input[type='text']:focus {
+    border-color: var(--focus-border-shadow-input);
+    box-shadow: 0 0 8px 0 var(--focus-border-shadow-input);
+  }
+
+  &__bar {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: rem(5);
+
+    @include breakpoint(medium) {
+      align-items: flex-start;
+      flex-direction: row;
+    }
   }
 }

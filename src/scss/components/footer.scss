@@ -1,0 +1,25 @@
+@use '../util' as *;
+
+.footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: rem(15);
+  margin-top: rem(80);
+
+  &__owner,
+  &__info {
+    text-align: center;
+    color: var(--bg-input);
+  }
+
+  &__link {
+    color: var(--border-label);
+  }
+
+  &__link:hover {
+    cursor: pointer;
+    color: var(--focus-border-shadow-input);
+  }
+}

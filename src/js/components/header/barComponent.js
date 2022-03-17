@@ -1,9 +1,9 @@
 export const barComponent = () => {
   const divBar = `
-    <div class="header__bar">
-        <label for="name" class="">Name</label>
-        <input type="text" name="name" id="name" placeholder="Enter pokemon name" />
-    </div>
+    <form id="form" class="header__bar">
+        <label for="search">Search</label>
+        <input type="text" id="search" name="search" placeholder="Enter number or name" autocomplete="off" />
+    </form>
   `;
 
   return divBar;

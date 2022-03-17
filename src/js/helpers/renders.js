@@ -10,3 +10,15 @@ export const renderPokemonComponents = (divPokemonGrid) => {
     });
   });
 };
+
+export const renderPokemonComponentByName = (divPokemonGrid, name) => {
+  provider.getKantoPokemonByName(name).then((data) => {
+    createDivComponent(divPokemonGrid, data);
+  });
+};
+
+export const renderPokemonComponentByNumber = (divPokemonGrid, number) => {
+  provider.getKantoPokemonByName(number).then((data) => {
+    createDivComponent(divPokemonGrid, data);
+  });
+};

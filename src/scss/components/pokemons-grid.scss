@@ -5,5 +5,20 @@
   justify-content: center;
   align-items: center;
   gap: rem(25);
-  grid-template-columns: repeat(7, 1fr);
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 0fr);
+  }
+
+  @include breakpoint(large) {
+    grid-template-columns: repeat(4, 0fr);
+  }
+
+  @include breakpoint(xlarge) {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  &--only-one {
+    grid-template-columns: none;
+  }
 }

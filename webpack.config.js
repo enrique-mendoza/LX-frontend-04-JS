@@ -70,7 +70,7 @@ module.exports = (env, argv) => {
     output: {
       clean: true,
       filename: isProduction ? '[name].[fullhash].js' : 'main.js',
-      path: path.resolve(__dirname, 'build'),
+      path: path.resolve(__dirname, 'docs'),
     },
     optimization: {
       minimize: true,
@@ -79,7 +79,8 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './src/index.html',
-        filename: isProduction ? '[name].[fullhash].html' : 'index.html',
+        filename: isProduction ? 'index.html' : 'index.html',
+        favicon: './src/assets/icons/fav.ico',
       }),
       new MiniCssExtractPlugin({
         filename: isProduction ? '[name].[fullhash].css' : 'main.css',

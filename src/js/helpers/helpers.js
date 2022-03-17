@@ -39,3 +39,13 @@ export const createMovesItems = (moves, ul) => {
     }
   }
 };
+
+export const removePokemons = (divClassName) => {
+  document.querySelectorAll(`.${divClassName}`).forEach((e) => e.remove());
+};
+
+export const validateNumbers = (id) => {
+  const pattern = /^[0-9]$/;
+
+  return pattern.test(id);
+};
